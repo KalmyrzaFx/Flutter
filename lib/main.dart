@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -22,10 +23,27 @@ class MyApp extends StatelessWidget {
             padding: EdgeInsets.all(20),
             child: Center(
               child: Column(
-                children: const [
-                  Padding(
+                children:  [
+                  const Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: Text('data'),
+                    child: Text('Hello world',
+                    style: TextStyle(
+                      fontFamily: 'monospace',
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.grey),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text('Earth')
+                  ),
+                  Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Container(
+                        child: Image.asset('earth.jpg'),
+                      )
                   )
                 ],
               ),
