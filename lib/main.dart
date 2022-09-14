@@ -42,7 +42,21 @@ class MyApp extends StatelessWidget {
                   Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Container(
+                        decoration: const BoxDecoration(
+                          boxShadow: [BoxShadow(
+                            color: Colors.lightBlue,
+                            blurRadius: 10,
+                            spreadRadius: 2
+                          )]
+                        ),
                         child: Image.asset('earth.jpg'),
+                      )
+                  ),
+                  Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: ElevatedButton(
+                        onPressed: ()=> print('pressed'),
+                        child: const Text('Contact Us'),
                       )
                   )
                 ],
@@ -52,5 +66,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void contactUs(BuildContext context){
   }
 }
